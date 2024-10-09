@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', sans-serif;
+}
+body{
+    background: var(--background-color);
+    padding: 20px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.container h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+.form-search{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.form-search .produc-input{
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid var(--primary-color);
+    outline: none;
+    margin-right: 12px;
+    font-size: 16px;
+}
+.form-search .produc-input:focus{
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.form-search button{
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--background-color);
+    transition: .6s ease;
+}
+.form-search button:hover{
+    background-color: #2980b9;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.product-card{
+    border-radius: 10px;
+    background-color: var(--card-background);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.product-card:hover{
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+.img-card{
+    width: 100%;
+}
+.title-card{
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight:bold ;
+}
+.price-card{
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.seller-card span{
+    color: var(--secondary-color);
+    font-weight: bold;
+}
